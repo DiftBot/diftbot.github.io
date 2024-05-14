@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
+/* font-family: 'Questrial', sans-serif; */
+
 @media screen and (max-width: 768px) {
     .menu {
         display: none;
@@ -11,8 +13,7 @@
         display: flex;
     }
 }
-
-* {
+*  {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -90,12 +91,14 @@ nav {
 
 .menu li a {
     color: #fff;
+    /* transition: .2s; */
     font-weight: 500;
     text-decoration: none;
 }
 
 .menu li a:hover {
     color: red;
+    /* transition: .3s; */
 }
 
 @media screen and (max-width: 768px) {
@@ -132,6 +135,7 @@ nav {
         border-radius: 100%;
         width: 50px;
     }
+
 
     .menu.active {
         display: flex;
@@ -232,6 +236,33 @@ span {
     color: #fff;
 }
 
+
+@media screen and (max-width: 768px) {
+    .dift-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .dift-title h1 {
+        font-size: 60px;
+    }
+
+    .ofrece-box {
+        margin: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .ofrece-content {
+        margin: 10px;
+    }
+}
+
+
 .dift-invite {
     display: flex;
     align-items: center;
@@ -272,12 +303,10 @@ footer {
 ::-webkit-scrollbar-thumb {
     background-color: rgb(48, 48, 48);
 }
-
 footer {
     display: flex;
     justify-content: space-between;
 }
-
 a.btn {
     padding: 15px 20px;
     font-size: 20px;
