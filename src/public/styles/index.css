@@ -220,16 +220,11 @@ span {
     background-color: #181818;
 }
 
-.status-content h1 {
-    color: #b3b3b3;
-}
-
-
 .ofrece-content {
     background-color: #222222;
     border-radius: 5px;
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
 }
 
 .ofrece-content h1 {
