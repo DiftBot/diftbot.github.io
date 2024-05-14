@@ -23,12 +23,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    margin: 30px;
+    padding: 2% 5%;
+    margin: 3%;
     border-radius: 10px;
     backdrop-filter: blur(7px);
     background-color: #18181893;
-    position: relative; /* Se agrega posición relativa para alinear el menú con el ícono */
 }
 
 .title-and-logo {
@@ -37,18 +36,18 @@ header {
 }
 
 .title-and-logo img {
-    margin-right: 10px;
-    width: 50px;
+    margin-right: 2%;
+    width: 10%;
     border-radius: 100%;
 }
 
 .menu-icon {
     display: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 1%;
     position: absolute;
     top: 50%;
-    right: 50px
+    right: 5%;
     transform: translateY(-50%);
 }
 
@@ -67,9 +66,11 @@ nav {
 
 .menu {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    width: 80%;
+    margin: 2% auto;
+    padding: 5%;
     display: flex;
+    justify-content: space-between;
 }
 
 .menu .dift-menu {
@@ -77,7 +78,7 @@ nav {
 }
 
 .menu li {
-    margin-right: 20px;
+    margin-right: 2%;
     margin: 10px;
 }
 
@@ -97,55 +98,14 @@ nav {
 
 /* Estilos del menú en dispositivos móviles */
 @media screen and (max-width: 768px) {
+    .menu {
+        width: 80%;
+        margin: 2% auto;
+        padding: 5%;
+    }
+
     .menu-icon {
         display: block;
-    }
-
-    .menu {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        text-align: center;
-        top: 100%;
-        left: 0;
-        height: auto;
-        margin: 10px;
-        width: 300px;
-        background-color: #181818;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .menu .dift-menu {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .menu .dift-menu img {
-        display: flex;
-        border-radius: 100%;
-        width: 50px;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    @keyframes fade {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
     }
 }
 
@@ -273,15 +233,4 @@ footer {
 
 ::-webkit-scrollbar-thumb {
     background-color: rgb(48, 48, 48);
-}
-
-/* Estilos de los botones */
-footer {
-    display: flex;
-    justify-content: space-between;
-}
-
-a.btn {
-    padding: 15px 20px;
-    font-size: 20px;
 }
