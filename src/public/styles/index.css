@@ -2,18 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
-/* font-family: 'Questrial', sans-serif; */
-
-@media screen and (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-}
-*  {
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,6 +18,7 @@ body {
     user-select: none;
 }
 
+/* Estilos del encabezado */
 header {
     display: flex;
     justify-content: space-between;
@@ -37,6 +28,7 @@ header {
     border-radius: 10px;
     backdrop-filter: blur(7px);
     background-color: #18181893;
+    position: relative; /* Se agrega posición relativa para alinear el menú con el ícono */
 }
 
 .title-and-logo {
@@ -50,15 +42,14 @@ header {
     border-radius: 100%;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-}
-
 .menu-icon {
     display: none;
     cursor: pointer;
     padding: 10px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }
 
 .bar {
@@ -67,6 +58,11 @@ nav {
     background-color: #fff;
     border-radius: 1px;
     margin: 5px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 .menu {
@@ -91,27 +87,29 @@ nav {
 
 .menu li a {
     color: #fff;
-    /* transition: .2s; */
     font-weight: 500;
     text-decoration: none;
 }
 
 .menu li a:hover {
     color: red;
-    /* transition: .3s; */
 }
 
+/* Estilos del menú en dispositivos móviles */
 @media screen and (max-width: 768px) {
-    .title-and-logo h1 {
-        font-size: 26px;
+    .menu-icon {
+        display: block;
     }
 
     .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
         display: none;
         flex-direction: column;
         position: absolute;
         text-align: center;
-        top: 80px;
+        top: 100%;
         left: 0;
         height: auto;
         margin: 10px;
@@ -136,14 +134,8 @@ nav {
         width: 50px;
     }
 
-
     .menu.active {
         display: flex;
-        animation: fade .4s;
-    }
-
-    .menu-icon {
-        display: block;
     }
 
     @keyframes fade {
@@ -157,6 +149,7 @@ nav {
     }
 }
 
+/* Otros estilos */
 a {
     text-decoration: none;
     color: #fff;
@@ -171,6 +164,7 @@ span {
     color: rgb(255, 0, 0);
 }
 
+/* Estilos de los títulos */
 .dift-title {
     margin-left: 30px;
 }
@@ -205,6 +199,7 @@ span {
     margin-top: 50px;
 }
 
+/* Estilos del estado de Dift */
 .dift-status-box {
     display: flex;
     justify-content: center;
@@ -236,33 +231,7 @@ span {
     color: #fff;
 }
 
-
-@media screen and (max-width: 768px) {
-    .dift-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin: 20px;
-    }
-
-    .dift-title h1 {
-        font-size: 60px;
-    }
-
-    .ofrece-box {
-        margin: 10px;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    .ofrece-content {
-        margin: 10px;
-    }
-}
-
-
+/* Estilos de la invitación a unirse */
 .dift-invite {
     display: flex;
     align-items: center;
@@ -290,11 +259,13 @@ span {
     transition: .4s;
 }
 
+/* Estilos del pie de página */
 footer {
     text-align: center;
     padding: 20px;
 }
 
+/* Estilos de la barra de desplazamiento */
 ::-webkit-scrollbar {
     width: 9px;
     background-color: #121212;
@@ -303,10 +274,13 @@ footer {
 ::-webkit-scrollbar-thumb {
     background-color: rgb(48, 48, 48);
 }
+
+/* Estilos de los botones */
 footer {
     display: flex;
     justify-content: space-between;
 }
+
 a.btn {
     padding: 15px 20px;
     font-size: 20px;
